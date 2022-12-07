@@ -105,7 +105,7 @@ def phonenumber_details(request, phonenumber):
       
     }
 
-    return HttpResponse(JsonResponse(context))
+    return JsonResponse(context, safe=False)
 
 
 
