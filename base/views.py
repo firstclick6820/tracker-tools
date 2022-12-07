@@ -31,8 +31,25 @@ import platform
 import urllib.request
 
 
-
-
+# This simple function return the mobile number information to the user
+@api_view(['GET'])
+@permission_classes((permissions.AllowAny,))
+def home(request):
+    context = {
+        "Welcome": "Welcome to the Tracker Tools API - Home Page",
+        "URLs": {
+            "Phonenumber": "/api/phonenumber/971527546685",
+            "Country": "/api/country/afghanistan",
+            "User Information": '/api/searcher/'
+        },
+        "Directions": {
+            "Phoneumber": "Use the number with country code with the + or 00.",
+            "Country": "Country name no matter upper or lower case.",
+            "User Information": "simply type the url to get your ip address and more information."
+        }
+        
+    }
+    return JsonResponse(context, safe=False)
 
 
 

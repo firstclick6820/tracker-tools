@@ -4,12 +4,13 @@ from django.urls import path
 
 
 
-from .views import phonenumber_details, countryInformation, seracher_details
+from .views import phonenumber_details, countryInformation, seracher_details, home
 
 
 
 urlpatterns = [
-    path('phonenumber/<int:phonenumber>/', phonenumber_details, name="phonenumber_details"),
-    path('country/<str:country>/',countryInformation, name='country_information' ),
-    path('searcher/', seracher_details, name="searcher_details")
+    path('', home, name="Home Page"),
+    path('api/phonenumber/<int:phonenumber>/', phonenumber_details, name="phonenumber_details"),
+    path('api/country/<str:country>/',countryInformation, name='country_information' ),
+    path('api/searcher/', seracher_details, name="searcher_details")
 ]
