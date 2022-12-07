@@ -43,7 +43,7 @@ def home(request):
             "User Information": '/api/searcher/'
         },
         "Directions": {
-            "Phoneumber": "Use the number with country code with the + or 00.",
+            "Phoneumber": "Insert the target mobile number with the country code without the + or 00.",
             "Country": "Country name no matter upper or lower case.",
             "User Information": "simply type the url to get your ip address and more information."
         }
