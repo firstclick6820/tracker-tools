@@ -10,6 +10,8 @@ countryinfo = "*"
 requests = "*"
 folium = "*"
 djangorestframework = "*"
+whitenoise = "*"
+gunicorn = "*"
 
 [dev-packages]
 
